@@ -23,17 +23,24 @@ namespace Sys_Prog
         {
             result = 100;
             ConsoleLog.Items.Add("Start...");
-            for (int i = 1; i <=12; i++)
+            for (int i = 1; i <= 12; i++)
             {
                 new Thread(AddPercent).Start(i);
             }
+
+
         }
         double result;
+        int Index = 0;
         object reslocker = new();
         private void AddPercent(object month)
         {
+            List<TextBox> tbxs = this.Controls.OfType<TextBox>()
+                .Where(x => x.Name.Contains("textBox")).ToList();
+            tbxs.Reverse();
             lock (reslocker)
             {
+
                 double tmp = result;
                 Thread.Sleep(rnd.Next(100, 200));
                 tmp *= 1.1;
@@ -44,7 +51,17 @@ namespace Sys_Prog
                             "{0} - {1}",
                             Convert.ToInt32(month),
                             result))));
+                if (Controls[Index] is TextBox)
+                {
+                    TextBox t = tbxs.First();
+                    tbxs[Index].Text = Convert.ToString(result);
+                    Index++;
+                }
             }
+
+
+
+ 
         }
     }
 }
