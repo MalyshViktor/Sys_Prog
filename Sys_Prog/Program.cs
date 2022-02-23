@@ -17,7 +17,7 @@ namespace Sys_Prog
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SyncForm());
+            Application.Run(new Form1());
         }
     }
 }

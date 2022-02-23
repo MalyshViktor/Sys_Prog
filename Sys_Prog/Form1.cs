@@ -68,17 +68,29 @@ namespace Sys_Prog
                             progressBar1.Value = i * 10;
                         }));
                 Thread.Sleep(pTime);
+                if (stopPressed)
+                {
+                    progressThread = null;
+                    break;
+                }
             }
+            progressThread2 = null;
         }
         private void buttonStart2_Click(object sender, EventArgs e)
         {
-            progressThread2 = new Thread(ShowProgress2);
-            progressThread2.Start(300);
+            stopPressed = false;
+            if (progressThread2 == null && progressThread == null)
+            {
+                progressThread2 = new Thread(ShowProgress2);
+                progressThread2.Start(300);
+            }
+            
+            
         }
 
         private void buttonStop2_Click(object sender, EventArgs e)
         {
-
+            stopPressed = true;
         }
 
         private CancellationTokenSource cts;
