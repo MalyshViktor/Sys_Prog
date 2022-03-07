@@ -56,6 +56,11 @@ namespace Sys_Prog
             this.textBoxOctober = new System.Windows.Forms.TextBox();
             this.textBoxNovember = new System.Windows.Forms.TextBox();
             this.textBoxDecember = new System.Windows.Forms.TextBox();
+            this.buttonSchemel1 = new System.Windows.Forms.Button();
+            this.buttonScheme2 = new System.Windows.Forms.Button();
+            this.buttonScheme3 = new System.Windows.Forms.Button();
+            this.textBoxThreads = new System.Windows.Forms.TextBox();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ConsoleLog
@@ -291,11 +296,64 @@ namespace Sys_Prog
             this.textBoxDecember.TabIndex = 26;
             this.textBoxDecember.Tag = "12";
             // 
+            // buttonSchemel1
+            // 
+            this.buttonSchemel1.Location = new System.Drawing.Point(354, 76);
+            this.buttonSchemel1.Name = "buttonSchemel1";
+            this.buttonSchemel1.Size = new System.Drawing.Size(75, 23);
+            this.buttonSchemel1.TabIndex = 27;
+            this.buttonSchemel1.Text = "Scheme1";
+            this.buttonSchemel1.UseVisualStyleBackColor = true;
+            this.buttonSchemel1.Click += new System.EventHandler(this.buttonSchemel1_Click);
+            // 
+            // buttonScheme2
+            // 
+            this.buttonScheme2.Location = new System.Drawing.Point(354, 119);
+            this.buttonScheme2.Name = "buttonScheme2";
+            this.buttonScheme2.Size = new System.Drawing.Size(75, 23);
+            this.buttonScheme2.TabIndex = 28;
+            this.buttonScheme2.Text = "Scheme2";
+            this.buttonScheme2.UseVisualStyleBackColor = true;
+            this.buttonScheme2.Click += new System.EventHandler(this.buttonScheme2_Click);
+            // 
+            // buttonScheme3
+            // 
+            this.buttonScheme3.Location = new System.Drawing.Point(354, 165);
+            this.buttonScheme3.Name = "buttonScheme3";
+            this.buttonScheme3.Size = new System.Drawing.Size(75, 23);
+            this.buttonScheme3.TabIndex = 29;
+            this.buttonScheme3.Text = "Scheme3";
+            this.buttonScheme3.UseVisualStyleBackColor = true;
+            this.buttonScheme3.Click += new System.EventHandler(this.buttonScheme3_Click);
+            // 
+            // textBoxThreads
+            // 
+            this.textBoxThreads.Location = new System.Drawing.Point(344, 203);
+            this.textBoxThreads.Name = "textBoxThreads";
+            this.textBoxThreads.Size = new System.Drawing.Size(100, 23);
+            this.textBoxThreads.TabIndex = 30;
+            this.textBoxThreads.Text = "2";
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(354, 261);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonClear.TabIndex = 31;
+            this.buttonClear.Text = "Очистить";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // SyncForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonClear);
+            this.Controls.Add(this.textBoxThreads);
+            this.Controls.Add(this.buttonScheme3);
+            this.Controls.Add(this.buttonScheme2);
+            this.Controls.Add(this.buttonSchemel1);
             this.Controls.Add(this.textBoxDecember);
             this.Controls.Add(this.textBoxNovember);
             this.Controls.Add(this.textBoxOctober);
@@ -359,5 +417,10 @@ namespace Sys_Prog
         private System.Windows.Forms.TextBox textBoxOctober;
         private System.Windows.Forms.TextBox textBoxNovember;
         private System.Windows.Forms.TextBox textBoxDecember;
+        private System.Windows.Forms.Button buttonSchemel1;
+        private System.Windows.Forms.Button buttonScheme2;
+        private System.Windows.Forms.Button buttonScheme3;
+        private System.Windows.Forms.TextBox textBoxThreads;
+        private System.Windows.Forms.Button buttonClear;
     }
 }
