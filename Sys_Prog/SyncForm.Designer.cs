@@ -61,6 +61,10 @@ namespace Sys_Prog
             this.buttonScheme3 = new System.Windows.Forms.Button();
             this.textBoxThreads = new System.Windows.Forms.TextBox();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonDigits = new System.Windows.Forms.Button();
+            this.buttonPool1 = new System.Windows.Forms.Button();
+            this.buttonPool2 = new System.Windows.Forms.Button();
+            this.buttonPool2Stop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ConsoleLog
@@ -336,7 +340,7 @@ namespace Sys_Prog
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(354, 261);
+            this.buttonClear.Location = new System.Drawing.Point(354, 304);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(75, 23);
             this.buttonClear.TabIndex = 31;
@@ -344,11 +348,55 @@ namespace Sys_Prog
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // buttonDigits
+            // 
+            this.buttonDigits.Location = new System.Drawing.Point(354, 251);
+            this.buttonDigits.Name = "buttonDigits";
+            this.buttonDigits.Size = new System.Drawing.Size(75, 23);
+            this.buttonDigits.TabIndex = 32;
+            this.buttonDigits.Text = "Digits";
+            this.buttonDigits.UseVisualStyleBackColor = true;
+            this.buttonDigits.Click += new System.EventHandler(this.buttonDigits_Click);
+            // 
+            // buttonPool1
+            // 
+            this.buttonPool1.Location = new System.Drawing.Point(354, 344);
+            this.buttonPool1.Name = "buttonPool1";
+            this.buttonPool1.Size = new System.Drawing.Size(75, 23);
+            this.buttonPool1.TabIndex = 33;
+            this.buttonPool1.Text = "Pool1";
+            this.buttonPool1.UseVisualStyleBackColor = true;
+            this.buttonPool1.Click += new System.EventHandler(this.buttonPool1_Click);
+            // 
+            // buttonPool2
+            // 
+            this.buttonPool2.Location = new System.Drawing.Point(354, 388);
+            this.buttonPool2.Name = "buttonPool2";
+            this.buttonPool2.Size = new System.Drawing.Size(75, 23);
+            this.buttonPool2.TabIndex = 34;
+            this.buttonPool2.Text = "Pool2Start";
+            this.buttonPool2.UseVisualStyleBackColor = true;
+            this.buttonPool2.Click += new System.EventHandler(this.buttonPool2_Click);
+            // 
+            // buttonPool2Stop
+            // 
+            this.buttonPool2Stop.Location = new System.Drawing.Point(354, 436);
+            this.buttonPool2Stop.Name = "buttonPool2Stop";
+            this.buttonPool2Stop.Size = new System.Drawing.Size(75, 23);
+            this.buttonPool2Stop.TabIndex = 35;
+            this.buttonPool2Stop.Text = "Pool2Stop";
+            this.buttonPool2Stop.UseVisualStyleBackColor = true;
+            this.buttonPool2Stop.Click += new System.EventHandler(this.buttonPool2Stop_Click);
+            // 
             // SyncForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(843, 550);
+            this.Controls.Add(this.buttonPool2Stop);
+            this.Controls.Add(this.buttonPool2);
+            this.Controls.Add(this.buttonPool1);
+            this.Controls.Add(this.buttonDigits);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.textBoxThreads);
             this.Controls.Add(this.buttonScheme3);
@@ -422,5 +470,9 @@ namespace Sys_Prog
         private System.Windows.Forms.Button buttonScheme3;
         private System.Windows.Forms.TextBox textBoxThreads;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonDigits;
+        private System.Windows.Forms.Button buttonPool1;
+        private System.Windows.Forms.Button buttonPool2;
+        private System.Windows.Forms.Button buttonPool2Stop;
     }
 }
