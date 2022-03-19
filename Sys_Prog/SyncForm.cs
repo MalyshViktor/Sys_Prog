@@ -13,7 +13,7 @@ namespace Sys_Prog
 {
     public partial class SyncForm : Form
     {
-        private Random rnd = new();
+        private Random rnd = new Random();
 
 
         public SyncForm()
@@ -33,38 +33,64 @@ namespace Sys_Prog
             }
 
 
-        }
-        double result;
-        int Index = 0;
+        } 
+        private double result;
+        
         object reslocker = new ();
         Action<String> Log;
-        private void AddPercent(object month)
+        private void AddPercent(object m)
         {
-            List<TextBox> tbxs = this.Controls.OfType<TextBox>()
-                .Where(x => x.Name.Contains("textBox")).ToList();
-            tbxs.Reverse();
+            int month = 0;
+            try
+            {
+                month = Convert.ToInt32(m);
+            }
+            catch 
+            {
+                ConsoleLog.Items.Add("Parse exception");
+                return;
+            }
+            if (month < 1 || month > 12)
+            {
+                Invoke(new Action(() =>
+                {
+                    ConsoleLog.Items.Add("Month invalid");
+                }));
+                return;
+            }
+            TextBox tbxs = Controls.Find("textBox" + m, true).FirstOrDefault() as TextBox;
+            if (tbxs == null)
+            {
+                Invoke(new Action(() => {
+                    ConsoleLog.Items.Add("TextBox not found");
+                }));
+                return;
+            }
+            double percent = -1;
+            try
+            {
+                percent = Convert.ToDouble(tbxs.Text);
+            }
+            catch
+            {
+                Invoke(new Action(() => {
+                    ConsoleLog.Items.Add("Parse percent exception");
+                }));
+                return;
+            }
+            if (percent < 0)
+            {
+                Invoke(new Action(() => {
+                    ConsoleLog.Items.Add("Percent invalid");
+                }));
+                return;
+            }
             lock (reslocker)
             {
-
-                double tmp = result;
-                //Thread.Sleep(rnd.Next(100, 200));
-                tmp *= 1.1;
-                result = tmp;
-
-                Invoke(new Action(
-                    () => ConsoleLog.Items.Add(
-                        String.Format(
-                            "{0} - {1}",
-                            Convert.ToInt32(month),
-                            result))));
-
-                if (Controls[Index] is TextBox)
-                {
-                    TextBox t = tbxs.First();
-                    tbxs[Index].Text = Convert.ToString(result);
-                    Index++;
-                }
+                result *=1 + percent / 100;
+                Invoke(new Action(() => { ConsoleLog.Items.Add(month + " " + result); }));
             }
+
         }
 
 
@@ -188,7 +214,7 @@ namespace Sys_Prog
             if (digit < 0 || digit > 9)
             {
                 Invoke(new Action(() => ConsoleLog.Items.Add("Digit invalid")));
-                return;
+                return; 
             }
             lock (reslocker)
             {
@@ -259,17 +285,40 @@ namespace Sys_Prog
         private CancellationTokenSource cts = new CancellationTokenSource();
         private void PoolProc2(object? param)
         {
-            if (param == null) return;
+            
             var threadData = param as ThreadData;
-            str = "Start " + threadData.id;
-            Invoke((Action)Logs);
+            if (threadData == null) return;
+            lock (cts)
+            {
+                str = "Start " + threadData.id;
+                Invoke((Action)Logs);
+            }
+            for (int i = 0; i < 100; i++)
+            {
+                Thread.Sleep(rnd.Next(40));
+                if (threadData.Token.IsCancellationRequested)
+                {
+                    lock (cts)
+                    {
+                        str = "Start " + threadData.id;
+                        Invoke((Action)Logs);
+                    }
+                    return;
+                }
+            }
+            lock (cts)
+            {
+                str = "Finish " + threadData.id;
+                Invoke((Action)Logs);
+            }
         }
+
 
         private void buttonPool2_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < 10; i++)
             {
-                ThreadPool.QueueUserWorkItem(PoolProc2, new ThreadData { id = i, Token = cts.Token });
+                ThreadPool.QueueUserWorkItem(PoolProc2, new ThreadData { months = i, Token = cts.Token });
             }
         }
 
@@ -283,9 +332,26 @@ namespace Sys_Prog
         {
             public int id { get; set; }
 
+            public int months { get; set; }
             public CancellationToken Token { get; set; }
 
         
         }
+
+        private void buttonPercentPool_Click(object sender, EventArgs e)
+        {
+            result = 100;
+            ConsoleLog.Items.Add("Start...");
+            for (int i = 1; i <= 12; i++)
+            {
+                ThreadPool.QueueUserWorkItem(AddPercent, i);
+            }
+        }
+
+        private void buttonSyncAsync_Click(object sender, EventArgs e)
+        {
+            new Sync_Async().ShowDialog(this);
+        }
     }
 }
+
