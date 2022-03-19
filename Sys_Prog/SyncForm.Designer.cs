@@ -44,18 +44,18 @@ namespace Sys_Prog
             this.labelOctober = new System.Windows.Forms.Label();
             this.labelNovember = new System.Windows.Forms.Label();
             this.labelDecember = new System.Windows.Forms.Label();
-            this.textBoxJanuary = new System.Windows.Forms.TextBox();
-            this.textBoxFebruary = new System.Windows.Forms.TextBox();
-            this.textBoxMarch = new System.Windows.Forms.TextBox();
-            this.textBoxApril = new System.Windows.Forms.TextBox();
-            this.textBoxMay = new System.Windows.Forms.TextBox();
-            this.textBoxJune = new System.Windows.Forms.TextBox();
-            this.textBoxJuly = new System.Windows.Forms.TextBox();
-            this.textBoxAugust = new System.Windows.Forms.TextBox();
-            this.textBoxSeptember = new System.Windows.Forms.TextBox();
-            this.textBoxOctober = new System.Windows.Forms.TextBox();
-            this.textBoxNovember = new System.Windows.Forms.TextBox();
-            this.textBoxDecember = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.buttonSchemel1 = new System.Windows.Forms.Button();
             this.buttonScheme2 = new System.Windows.Forms.Button();
             this.buttonScheme3 = new System.Windows.Forms.Button();
@@ -65,6 +65,9 @@ namespace Sys_Prog
             this.buttonPool1 = new System.Windows.Forms.Button();
             this.buttonPool2 = new System.Windows.Forms.Button();
             this.buttonPool2Stop = new System.Windows.Forms.Button();
+            this.buttonPercentPool = new System.Windows.Forms.Button();
+            this.buttonSyncAsync = new System.Windows.Forms.Button();
+            this.buttonPercentTask = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ConsoleLog
@@ -78,7 +81,7 @@ namespace Sys_Prog
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(35, 26);
+            this.buttonStart.Location = new System.Drawing.Point(12, 26);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(76, 23);
             this.buttonStart.TabIndex = 1;
@@ -204,101 +207,113 @@ namespace Sys_Prog
             this.labelDecember.TabIndex = 14;
             this.labelDecember.Text = "Декабрь";
             // 
-            // textBoxJanuary
+            // textBox1
             // 
-            this.textBoxJanuary.Location = new System.Drawing.Point(158, 73);
-            this.textBoxJanuary.Name = "textBoxJanuary";
-            this.textBoxJanuary.Size = new System.Drawing.Size(100, 23);
-            this.textBoxJanuary.TabIndex = 15;
-            this.textBoxJanuary.Tag = "1";
+            this.textBox1.Location = new System.Drawing.Point(158, 73);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 15;
+            this.textBox1.Tag = "1";
+            this.textBox1.Text = "11";
             // 
-            // textBoxFebruary
+            // textBox2
             // 
-            this.textBoxFebruary.Location = new System.Drawing.Point(158, 104);
-            this.textBoxFebruary.Name = "textBoxFebruary";
-            this.textBoxFebruary.Size = new System.Drawing.Size(100, 23);
-            this.textBoxFebruary.TabIndex = 16;
-            this.textBoxFebruary.Tag = "2";
+            this.textBox2.Location = new System.Drawing.Point(158, 104);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 23);
+            this.textBox2.TabIndex = 16;
+            this.textBox2.Tag = "2";
+            this.textBox2.Text = "12";
             // 
-            // textBoxMarch
+            // textBox3
             // 
-            this.textBoxMarch.Location = new System.Drawing.Point(158, 133);
-            this.textBoxMarch.Name = "textBoxMarch";
-            this.textBoxMarch.Size = new System.Drawing.Size(100, 23);
-            this.textBoxMarch.TabIndex = 17;
-            this.textBoxMarch.Tag = "3";
+            this.textBox3.Location = new System.Drawing.Point(158, 133);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 23);
+            this.textBox3.TabIndex = 17;
+            this.textBox3.Tag = "3";
+            this.textBox3.Text = "13";
             // 
-            // textBoxApril
+            // textBox4
             // 
-            this.textBoxApril.Location = new System.Drawing.Point(158, 162);
-            this.textBoxApril.Name = "textBoxApril";
-            this.textBoxApril.Size = new System.Drawing.Size(100, 23);
-            this.textBoxApril.TabIndex = 18;
-            this.textBoxApril.Tag = "4";
+            this.textBox4.Location = new System.Drawing.Point(158, 162);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 23);
+            this.textBox4.TabIndex = 18;
+            this.textBox4.Tag = "4";
+            this.textBox4.Text = "14";
             // 
-            // textBoxMay
+            // textBox5
             // 
-            this.textBoxMay.Location = new System.Drawing.Point(158, 191);
-            this.textBoxMay.Name = "textBoxMay";
-            this.textBoxMay.Size = new System.Drawing.Size(100, 23);
-            this.textBoxMay.TabIndex = 19;
-            this.textBoxMay.Tag = "5";
+            this.textBox5.Location = new System.Drawing.Point(158, 191);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 23);
+            this.textBox5.TabIndex = 19;
+            this.textBox5.Tag = "5";
+            this.textBox5.Text = "15";
             // 
-            // textBoxJune
+            // textBox6
             // 
-            this.textBoxJune.Location = new System.Drawing.Point(158, 221);
-            this.textBoxJune.Name = "textBoxJune";
-            this.textBoxJune.Size = new System.Drawing.Size(100, 23);
-            this.textBoxJune.TabIndex = 20;
-            this.textBoxJune.Tag = "6";
+            this.textBox6.Location = new System.Drawing.Point(158, 221);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 23);
+            this.textBox6.TabIndex = 20;
+            this.textBox6.Tag = "6";
+            this.textBox6.Text = "16";
             // 
-            // textBoxJuly
+            // textBox7
             // 
-            this.textBoxJuly.Location = new System.Drawing.Point(158, 250);
-            this.textBoxJuly.Name = "textBoxJuly";
-            this.textBoxJuly.Size = new System.Drawing.Size(100, 23);
-            this.textBoxJuly.TabIndex = 21;
-            this.textBoxJuly.Tag = "7";
+            this.textBox7.Location = new System.Drawing.Point(158, 250);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 23);
+            this.textBox7.TabIndex = 21;
+            this.textBox7.Tag = "7";
+            this.textBox7.Text = "17";
             // 
-            // textBoxAugust
+            // textBox8
             // 
-            this.textBoxAugust.Location = new System.Drawing.Point(158, 279);
-            this.textBoxAugust.Name = "textBoxAugust";
-            this.textBoxAugust.Size = new System.Drawing.Size(100, 23);
-            this.textBoxAugust.TabIndex = 22;
-            this.textBoxAugust.Tag = "8";
+            this.textBox8.Location = new System.Drawing.Point(158, 279);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 23);
+            this.textBox8.TabIndex = 22;
+            this.textBox8.Tag = "8";
+            this.textBox8.Text = "18";
             // 
-            // textBoxSeptember
+            // textBox9
             // 
-            this.textBoxSeptember.Location = new System.Drawing.Point(158, 308);
-            this.textBoxSeptember.Name = "textBoxSeptember";
-            this.textBoxSeptember.Size = new System.Drawing.Size(100, 23);
-            this.textBoxSeptember.TabIndex = 23;
-            this.textBoxSeptember.Tag = "9";
+            this.textBox9.Location = new System.Drawing.Point(158, 308);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 23);
+            this.textBox9.TabIndex = 23;
+            this.textBox9.Tag = "9";
+            this.textBox9.Text = "19";
             // 
-            // textBoxOctober
+            // textBox10
             // 
-            this.textBoxOctober.Location = new System.Drawing.Point(158, 337);
-            this.textBoxOctober.Name = "textBoxOctober";
-            this.textBoxOctober.Size = new System.Drawing.Size(100, 23);
-            this.textBoxOctober.TabIndex = 24;
-            this.textBoxOctober.Tag = "10";
+            this.textBox10.Location = new System.Drawing.Point(158, 337);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(100, 23);
+            this.textBox10.TabIndex = 24;
+            this.textBox10.Tag = "10";
+            this.textBox10.Text = "20";
             // 
-            // textBoxNovember
+            // textBox11
             // 
-            this.textBoxNovember.Location = new System.Drawing.Point(158, 366);
-            this.textBoxNovember.Name = "textBoxNovember";
-            this.textBoxNovember.Size = new System.Drawing.Size(100, 23);
-            this.textBoxNovember.TabIndex = 25;
-            this.textBoxNovember.Tag = "11";
+            this.textBox11.Location = new System.Drawing.Point(158, 366);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(100, 23);
+            this.textBox11.TabIndex = 25;
+            this.textBox11.Tag = "11";
+            this.textBox11.Text = "21";
             // 
-            // textBoxDecember
+            // textBox12
             // 
-            this.textBoxDecember.Location = new System.Drawing.Point(158, 396);
-            this.textBoxDecember.Name = "textBoxDecember";
-            this.textBoxDecember.Size = new System.Drawing.Size(100, 23);
-            this.textBoxDecember.TabIndex = 26;
-            this.textBoxDecember.Tag = "12";
+            this.textBox12.Location = new System.Drawing.Point(158, 396);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(100, 23);
+            this.textBox12.TabIndex = 26;
+            this.textBox12.Tag = "12";
+            this.textBox12.Text = "22";
             // 
             // buttonSchemel1
             // 
@@ -388,11 +403,44 @@ namespace Sys_Prog
             this.buttonPool2Stop.UseVisualStyleBackColor = true;
             this.buttonPool2Stop.Click += new System.EventHandler(this.buttonPool2Stop_Click);
             // 
+            // buttonPercentPool
+            // 
+            this.buttonPercentPool.Location = new System.Drawing.Point(103, 27);
+            this.buttonPercentPool.Name = "buttonPercentPool";
+            this.buttonPercentPool.Size = new System.Drawing.Size(75, 23);
+            this.buttonPercentPool.TabIndex = 36;
+            this.buttonPercentPool.Text = "Year(pool)";
+            this.buttonPercentPool.UseVisualStyleBackColor = true;
+            this.buttonPercentPool.Click += new System.EventHandler(this.buttonPercentPool_Click);
+            // 
+            // buttonSyncAsync
+            // 
+            this.buttonSyncAsync.Location = new System.Drawing.Point(519, 427);
+            this.buttonSyncAsync.Name = "buttonSyncAsync";
+            this.buttonSyncAsync.Size = new System.Drawing.Size(75, 23);
+            this.buttonSyncAsync.TabIndex = 37;
+            this.buttonSyncAsync.Text = "SyncAsync";
+            this.buttonSyncAsync.UseVisualStyleBackColor = true;
+            this.buttonSyncAsync.Click += new System.EventHandler(this.buttonSyncAsync_Click);
+            // 
+            // buttonPercentTask
+            // 
+            this.buttonPercentTask.Location = new System.Drawing.Point(194, 27);
+            this.buttonPercentTask.Name = "buttonPercentTask";
+            this.buttonPercentTask.Size = new System.Drawing.Size(75, 23);
+            this.buttonPercentTask.TabIndex = 38;
+            this.buttonPercentTask.Text = "Year(Task)";
+            this.buttonPercentTask.UseVisualStyleBackColor = true;
+            this.buttonPercentTask.Click += new System.EventHandler(this.buttonPercentTask_Click);
+            // 
             // SyncForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 550);
+            this.Controls.Add(this.buttonPercentTask);
+            this.Controls.Add(this.buttonSyncAsync);
+            this.Controls.Add(this.buttonPercentPool);
             this.Controls.Add(this.buttonPool2Stop);
             this.Controls.Add(this.buttonPool2);
             this.Controls.Add(this.buttonPool1);
@@ -402,18 +450,18 @@ namespace Sys_Prog
             this.Controls.Add(this.buttonScheme3);
             this.Controls.Add(this.buttonScheme2);
             this.Controls.Add(this.buttonSchemel1);
-            this.Controls.Add(this.textBoxDecember);
-            this.Controls.Add(this.textBoxNovember);
-            this.Controls.Add(this.textBoxOctober);
-            this.Controls.Add(this.textBoxSeptember);
-            this.Controls.Add(this.textBoxAugust);
-            this.Controls.Add(this.textBoxJuly);
-            this.Controls.Add(this.textBoxJune);
-            this.Controls.Add(this.textBoxMay);
-            this.Controls.Add(this.textBoxApril);
-            this.Controls.Add(this.textBoxMarch);
-            this.Controls.Add(this.textBoxFebruary);
-            this.Controls.Add(this.textBoxJanuary);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelDecember);
             this.Controls.Add(this.labelNovember);
             this.Controls.Add(this.labelOctober);
@@ -453,18 +501,18 @@ namespace Sys_Prog
         private System.Windows.Forms.Label labelOctober;
         private System.Windows.Forms.Label labelNovember;
         private System.Windows.Forms.Label labelDecember;
-        private System.Windows.Forms.TextBox textBoxJanuary;
-        private System.Windows.Forms.TextBox textBoxFebruary;
-        private System.Windows.Forms.TextBox textBoxMarch;
-        private System.Windows.Forms.TextBox textBoxApril;
-        private System.Windows.Forms.TextBox textBoxMay;
-        private System.Windows.Forms.TextBox textBoxJune;
-        private System.Windows.Forms.TextBox textBoxJuly;
-        private System.Windows.Forms.TextBox textBoxAugust;
-        private System.Windows.Forms.TextBox textBoxSeptember;
-        private System.Windows.Forms.TextBox textBoxOctober;
-        private System.Windows.Forms.TextBox textBoxNovember;
-        private System.Windows.Forms.TextBox textBoxDecember;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Button buttonSchemel1;
         private System.Windows.Forms.Button buttonScheme2;
         private System.Windows.Forms.Button buttonScheme3;
@@ -474,5 +522,8 @@ namespace Sys_Prog
         private System.Windows.Forms.Button buttonPool1;
         private System.Windows.Forms.Button buttonPool2;
         private System.Windows.Forms.Button buttonPool2Stop;
+        private System.Windows.Forms.Button buttonPercentPool;
+        private System.Windows.Forms.Button buttonSyncAsync;
+        private System.Windows.Forms.Button buttonPercentTask;
     }
 }
