@@ -348,9 +348,31 @@ namespace Sys_Prog
             }
         }
 
+
+
+        private void buttonPercentTask_Click(object sender, EventArgs e)
+        {
+            result = 100;
+            ConsoleLog.Items.Add("Start...");
+
+            Task.Run(() =>
+            {
+                for (int i = 1; i <= 12; i++)
+                {
+                    new Thread(AddPercent).Start(i);
+                }
+            });
+        }
+
+
         private void buttonSyncAsync_Click(object sender, EventArgs e)
         {
             new Sync_Async().ShowDialog(this);
+        }
+
+        private void buttonProcessesForm_Click(object sender, EventArgs e)
+        {
+            new ProcessesForm().ShowDialog(this);
         }
     }
 }

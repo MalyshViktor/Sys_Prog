@@ -67,6 +67,8 @@ namespace Sys_Prog
             this.buttonPool2Stop = new System.Windows.Forms.Button();
             this.buttonPercentPool = new System.Windows.Forms.Button();
             this.buttonSyncAsync = new System.Windows.Forms.Button();
+            this.buttonPercentTask = new System.Windows.Forms.Button();
+            this.buttonProcessesForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ConsoleLog
@@ -80,7 +82,7 @@ namespace Sys_Prog
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(35, 26);
+            this.buttonStart.Location = new System.Drawing.Point(12, 26);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(76, 23);
             this.buttonStart.TabIndex = 1;
@@ -404,7 +406,7 @@ namespace Sys_Prog
             // 
             // buttonPercentPool
             // 
-            this.buttonPercentPool.Location = new System.Drawing.Point(158, 27);
+            this.buttonPercentPool.Location = new System.Drawing.Point(103, 27);
             this.buttonPercentPool.Name = "buttonPercentPool";
             this.buttonPercentPool.Size = new System.Drawing.Size(75, 23);
             this.buttonPercentPool.TabIndex = 36;
@@ -422,11 +424,33 @@ namespace Sys_Prog
             this.buttonSyncAsync.UseVisualStyleBackColor = true;
             this.buttonSyncAsync.Click += new System.EventHandler(this.buttonSyncAsync_Click);
             // 
+            // buttonPercentTask
+            // 
+            this.buttonPercentTask.Location = new System.Drawing.Point(194, 27);
+            this.buttonPercentTask.Name = "buttonPercentTask";
+            this.buttonPercentTask.Size = new System.Drawing.Size(75, 23);
+            this.buttonPercentTask.TabIndex = 38;
+            this.buttonPercentTask.Text = "Year(Task)";
+            this.buttonPercentTask.UseVisualStyleBackColor = true;
+            this.buttonPercentTask.Click += new System.EventHandler(this.buttonPercentTask_Click);
+            // 
+            // buttonProcessesForm
+            // 
+            this.buttonProcessesForm.Location = new System.Drawing.Point(627, 427);
+            this.buttonProcessesForm.Name = "buttonProcessesForm";
+            this.buttonProcessesForm.Size = new System.Drawing.Size(112, 23);
+            this.buttonProcessesForm.TabIndex = 39;
+            this.buttonProcessesForm.Text = "ProcessesForm";
+            this.buttonProcessesForm.UseVisualStyleBackColor = true;
+            this.buttonProcessesForm.Click += new System.EventHandler(this.buttonProcessesForm_Click);
+            // 
             // SyncForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 550);
+            this.Controls.Add(this.buttonProcessesForm);
+            this.Controls.Add(this.buttonPercentTask);
             this.Controls.Add(this.buttonSyncAsync);
             this.Controls.Add(this.buttonPercentPool);
             this.Controls.Add(this.buttonPool2Stop);
@@ -512,5 +536,7 @@ namespace Sys_Prog
         private System.Windows.Forms.Button buttonPool2Stop;
         private System.Windows.Forms.Button buttonPercentPool;
         private System.Windows.Forms.Button buttonSyncAsync;
+        private System.Windows.Forms.Button buttonPercentTask;
+        private System.Windows.Forms.Button buttonProcessesForm;
     }
 }
