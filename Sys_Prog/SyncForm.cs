@@ -370,10 +370,16 @@ namespace Sys_Prog
             new Sync_Async().ShowDialog(this);
         }
 
-        private void buttonProcessesForm_Click(object sender, EventArgs e)
+        private void buttonProcess_Click(object sender, EventArgs e)
         {
             new ProcessesForm().ShowDialog(this);
         }
+
+        private void buttonDllForm_Click(object sender, EventArgs e)
+        {
+            new DllForm().ShowDialog(this);
+        }
+
     }
 }
 

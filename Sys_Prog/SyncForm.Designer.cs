@@ -68,7 +68,9 @@ namespace Sys_Prog
             this.buttonPercentPool = new System.Windows.Forms.Button();
             this.buttonSyncAsync = new System.Windows.Forms.Button();
             this.buttonPercentTask = new System.Windows.Forms.Button();
-            this.buttonProcessesForm = new System.Windows.Forms.Button();
+            this.buttonProcess = new System.Windows.Forms.Button();
+            this.buttonDllForm = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ConsoleLog
@@ -356,9 +358,9 @@ namespace Sys_Prog
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(354, 304);
+            this.buttonClear.Location = new System.Drawing.Point(354, 283);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonClear.Size = new System.Drawing.Size(75, 74);
             this.buttonClear.TabIndex = 31;
             this.buttonClear.Text = "Очистить";
             this.buttonClear.UseVisualStyleBackColor = true;
@@ -366,7 +368,7 @@ namespace Sys_Prog
             // 
             // buttonDigits
             // 
-            this.buttonDigits.Location = new System.Drawing.Point(354, 251);
+            this.buttonDigits.Location = new System.Drawing.Point(354, 243);
             this.buttonDigits.Name = "buttonDigits";
             this.buttonDigits.Size = new System.Drawing.Size(75, 23);
             this.buttonDigits.TabIndex = 32;
@@ -376,7 +378,7 @@ namespace Sys_Prog
             // 
             // buttonPool1
             // 
-            this.buttonPool1.Location = new System.Drawing.Point(354, 344);
+            this.buttonPool1.Location = new System.Drawing.Point(354, 369);
             this.buttonPool1.Name = "buttonPool1";
             this.buttonPool1.Size = new System.Drawing.Size(75, 23);
             this.buttonPool1.TabIndex = 33;
@@ -386,7 +388,7 @@ namespace Sys_Prog
             // 
             // buttonPool2
             // 
-            this.buttonPool2.Location = new System.Drawing.Point(354, 388);
+            this.buttonPool2.Location = new System.Drawing.Point(354, 417);
             this.buttonPool2.Name = "buttonPool2";
             this.buttonPool2.Size = new System.Drawing.Size(75, 23);
             this.buttonPool2.TabIndex = 34;
@@ -396,7 +398,7 @@ namespace Sys_Prog
             // 
             // buttonPool2Stop
             // 
-            this.buttonPool2Stop.Location = new System.Drawing.Point(354, 436);
+            this.buttonPool2Stop.Location = new System.Drawing.Point(354, 462);
             this.buttonPool2Stop.Name = "buttonPool2Stop";
             this.buttonPool2Stop.Size = new System.Drawing.Size(75, 23);
             this.buttonPool2Stop.TabIndex = 35;
@@ -434,22 +436,44 @@ namespace Sys_Prog
             this.buttonPercentTask.UseVisualStyleBackColor = true;
             this.buttonPercentTask.Click += new System.EventHandler(this.buttonPercentTask_Click);
             // 
-            // buttonProcessesForm
+            // buttonProcess
             // 
-            this.buttonProcessesForm.Location = new System.Drawing.Point(627, 427);
-            this.buttonProcessesForm.Name = "buttonProcessesForm";
-            this.buttonProcessesForm.Size = new System.Drawing.Size(112, 23);
-            this.buttonProcessesForm.TabIndex = 39;
-            this.buttonProcessesForm.Text = "ProcessesForm";
-            this.buttonProcessesForm.UseVisualStyleBackColor = true;
-            this.buttonProcessesForm.Click += new System.EventHandler(this.buttonProcessesForm_Click);
+            this.buttonProcess.Location = new System.Drawing.Point(622, 427);
+            this.buttonProcess.Name = "buttonProcess";
+            this.buttonProcess.Size = new System.Drawing.Size(75, 23);
+            this.buttonProcess.TabIndex = 39;
+            this.buttonProcess.Text = "Process";
+            this.buttonProcess.UseVisualStyleBackColor = true;
+            this.buttonProcess.Click += new System.EventHandler(this.buttonProcess_Click);
+            // 
+            // buttonDllForm
+            // 
+            this.buttonDllForm.Location = new System.Drawing.Point(723, 427);
+            this.buttonDllForm.Name = "buttonDllForm";
+            this.buttonDllForm.Size = new System.Drawing.Size(75, 23);
+            this.buttonDllForm.TabIndex = 40;
+            this.buttonDllForm.Text = "DllForm";
+            this.buttonDllForm.UseVisualStyleBackColor = true;
+            this.buttonDllForm.Click += new System.EventHandler(this.buttonDllForm_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // SyncForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(843, 550);
-            this.Controls.Add(this.buttonProcessesForm);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonDllForm);
+            this.Controls.Add(this.buttonProcess);
             this.Controls.Add(this.buttonPercentTask);
             this.Controls.Add(this.buttonSyncAsync);
             this.Controls.Add(this.buttonPercentPool);
@@ -489,6 +513,7 @@ namespace Sys_Prog
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.ConsoleLog);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "SyncForm";
             this.Text = "SyncForm";
             this.ResumeLayout(false);
@@ -537,6 +562,8 @@ namespace Sys_Prog
         private System.Windows.Forms.Button buttonPercentPool;
         private System.Windows.Forms.Button buttonSyncAsync;
         private System.Windows.Forms.Button buttonPercentTask;
-        private System.Windows.Forms.Button buttonProcessesForm;
+        private System.Windows.Forms.Button buttonProcess;
+        private System.Windows.Forms.Button buttonDllForm;
+        private System.Windows.Forms.Button button1;
     }
 }

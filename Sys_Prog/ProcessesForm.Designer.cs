@@ -34,14 +34,14 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(408, 30);
+            this.treeView1.Location = new System.Drawing.Point(355, 21);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(304, 408);
+            this.treeView1.Size = new System.Drawing.Size(248, 395);
             this.treeView1.TabIndex = 0;
             // 
             // buttonShow
             // 
-            this.buttonShow.Location = new System.Drawing.Point(43, 39);
+            this.buttonShow.Location = new System.Drawing.Point(21, 21);
             this.buttonShow.Name = "buttonShow";
             this.buttonShow.Size = new System.Drawing.Size(75, 23);
             this.buttonShow.TabIndex = 1;
