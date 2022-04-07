@@ -380,6 +380,10 @@ namespace Sys_Prog
             new DllForm().ShowDialog(this);
         }
 
+        private void buttonHook_Click(object sender, EventArgs e)
+        {
+            new HookForm().ShowDialog(this);
+        }
     }
 }
 

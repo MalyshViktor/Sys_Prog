@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using MessageBoxes;
+using StringEditor;
 
 namespace Sys_Prog
 {
@@ -56,6 +57,16 @@ namespace Sys_Prog
         {
             Alerts.Question("From Dll", "Question");
         }
+
+        private void buttonReverse_Click_1(object sender, EventArgs e)
+        {
+            Strings.Reverse("Reverse", "Some Message!");
+        }
+
+        private void buttonSingleSpace_Click_1(object sender, EventArgs e)
+        {
+            Strings.SingleSpace("SingleSpace", "Hello     World!");
+        }
     }
 
 }
@@ -71,4 +82,11 @@ namespace Sys_Prog
  *  
  *  в .NET мы можем иметь дело с "управляемымм" Dll (библиотеки классов)
  *  и неуправляемыми (обычно, созданные при помощи других языков)
+ *  
+ *  Подключение неуправляемых Dll
+ *  using System.Runtime.InteropServices;
+ *  перед методом указываем
+ *  [DllImport("user32.dll")] //user32.dll - источник
+ *  
+ *  
  * */

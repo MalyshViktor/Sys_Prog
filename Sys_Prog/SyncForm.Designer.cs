@@ -71,6 +71,7 @@ namespace Sys_Prog
             this.buttonProcess = new System.Windows.Forms.Button();
             this.buttonDllForm = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonHook = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ConsoleLog
@@ -465,12 +466,23 @@ namespace Sys_Prog
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // buttonHook
+            // 
+            this.buttonHook.Location = new System.Drawing.Point(622, 483);
+            this.buttonHook.Name = "buttonHook";
+            this.buttonHook.Size = new System.Drawing.Size(75, 23);
+            this.buttonHook.TabIndex = 42;
+            this.buttonHook.Text = "Hook";
+            this.buttonHook.UseVisualStyleBackColor = true;
+            this.buttonHook.Click += new System.EventHandler(this.buttonHook_Click);
+            // 
             // SyncForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(843, 550);
+            this.Controls.Add(this.buttonHook);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonDllForm);
             this.Controls.Add(this.buttonProcess);
@@ -565,5 +577,6 @@ namespace Sys_Prog
         private System.Windows.Forms.Button buttonProcess;
         private System.Windows.Forms.Button buttonDllForm;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonHook;
     }
 }

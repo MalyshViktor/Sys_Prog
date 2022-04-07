@@ -32,6 +32,8 @@
             this.buttonError = new System.Windows.Forms.Button();
             this.buttonWarning = new System.Windows.Forms.Button();
             this.buttonQuestion = new System.Windows.Forms.Button();
+            this.buttonReverse = new System.Windows.Forms.Button();
+            this.buttonSingleSpace = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonAlert
@@ -74,11 +76,33 @@
             this.buttonQuestion.UseVisualStyleBackColor = true;
             this.buttonQuestion.Click += new System.EventHandler(this.buttonQuestion_Click);
             // 
+            // buttonReverse
+            // 
+            this.buttonReverse.Location = new System.Drawing.Point(154, 49);
+            this.buttonReverse.Name = "buttonReverse";
+            this.buttonReverse.Size = new System.Drawing.Size(110, 23);
+            this.buttonReverse.TabIndex = 4;
+            this.buttonReverse.Text = "Reverse";
+            this.buttonReverse.UseVisualStyleBackColor = true;
+            this.buttonReverse.Click += new System.EventHandler(this.buttonReverse_Click_1);
+            // 
+            // buttonSingleSpace
+            // 
+            this.buttonSingleSpace.Location = new System.Drawing.Point(154, 104);
+            this.buttonSingleSpace.Name = "buttonSingleSpace";
+            this.buttonSingleSpace.Size = new System.Drawing.Size(110, 23);
+            this.buttonSingleSpace.TabIndex = 5;
+            this.buttonSingleSpace.Text = "SingleSpace";
+            this.buttonSingleSpace.UseVisualStyleBackColor = true;
+            this.buttonSingleSpace.Click += new System.EventHandler(this.buttonSingleSpace_Click_1);
+            // 
             // DllForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonSingleSpace);
+            this.Controls.Add(this.buttonReverse);
             this.Controls.Add(this.buttonQuestion);
             this.Controls.Add(this.buttonWarning);
             this.Controls.Add(this.buttonError);
@@ -95,5 +119,7 @@
         private System.Windows.Forms.Button buttonError;
         private System.Windows.Forms.Button buttonWarning;
         private System.Windows.Forms.Button buttonQuestion;
+        private System.Windows.Forms.Button buttonReverse;
+        private System.Windows.Forms.Button buttonSingleSpace;
     }
 }

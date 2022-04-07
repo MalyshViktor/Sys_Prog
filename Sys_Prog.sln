@@ -5,7 +5,9 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sys_Prog", "Sys_Prog\Sys_Prog.csproj", "{64AE1070-AD63-42EB-B936-31593E28B9B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBoxes", "MessageBoxes\MessageBoxes.csproj", "{754CC981-5B83-4C7E-8801-C17477EFB601}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageBoxes", "MessageBoxes\MessageBoxes.csproj", "{754CC981-5B83-4C7E-8801-C17477EFB601}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringEditor", "StringEditor\StringEditor.csproj", "{74A96D3D-4E3D-4CAC-B45F-C5D5B714E64F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{754CC981-5B83-4C7E-8801-C17477EFB601}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{754CC981-5B83-4C7E-8801-C17477EFB601}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{754CC981-5B83-4C7E-8801-C17477EFB601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74A96D3D-4E3D-4CAC-B45F-C5D5B714E64F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74A96D3D-4E3D-4CAC-B45F-C5D5B714E64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74A96D3D-4E3D-4CAC-B45F-C5D5B714E64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74A96D3D-4E3D-4CAC-B45F-C5D5B714E64F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
